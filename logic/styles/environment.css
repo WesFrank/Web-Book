@@ -1,0 +1,196 @@
+.definition {
+    counter-increment: definition;
+    display: block;
+    margin: 12px 0;
+    font-style: italic;
+}
+
+.definition::before {
+    content: "Definition. ";
+    font-weight: bold;
+    font-style: normal;
+}
+
+.defininition[text]::before {
+    content: "Corollary (" attr(text) ") ";
+}
+
+.definition p {
+    display: inline;
+}
+
+.theorem {
+    counter-increment: theorem;
+    display: block;
+    margin: 12px 0;
+    font-style: italic;
+}
+
+.theorem::before {
+    content: "Theorem. ";
+    font-weight: bold;
+    font-style: normal;
+}
+
+.theorem[text]::before {
+    content: "Theorem (" attr(text) ") ";
+}
+
+.theorem p {
+    display: inline;
+}
+
+.lemma {
+    counter-increment: lemma;
+    display: block;
+    margin: 12px 0;
+    font-style: italic;
+}
+
+.lemma::before {
+    content: "Lemma. ";
+    font-weight: bold;
+    font-style: normal;
+}
+
+.lemma[text]::before {
+    content: "Lemma (" attr(text) ") ";
+}
+
+.lemma p {
+    display: inline;
+}
+
+.corollary {
+    counter-increment: corollary;
+    display: block;
+    margin: 12px 0;
+    font-style: italic;
+}
+
+.corollary::before {
+    content: "Corollary. ";
+    font-weight: bold;
+    font-style: normal;
+}
+
+.corollary[text]::before {
+    content: "Corollary (" attr(text) ") ";
+}
+
+.corollary p {
+    display: inline;
+}
+
+.countertheorem {
+    /*counter-increment: theorem;*/
+    display: block;
+    margin: 12px 0;
+    font-style: italic;
+    counter-increment: theorem ;
+}
+
+.countertheorem::before {
+    font-style: normal; 
+    font-weight: bold; 
+    content: "Theorem " counter(chap)"."counter(sect)"."counter(thm)". ";
+}
+
+.countertheorem::before[text] {
+    content: "Theorem (" attr(text) ") ";
+}
+
+.countertheorem p {
+    display: inline;
+}
+
+.proof {
+    /*counter-increment: theorem;*/
+    display: block;
+    margin: 12px 0;
+    font-style: normal;
+    position: relative;
+}
+
+.proof::before {
+    content: "Proof. ";
+    font-weight: lighter;
+    font-style: italic;
+}
+
+.proof[text]::before {
+    content: "Proof (" attr(text) ") ";
+}
+
+.proof p {
+    display: inline;
+}
+
+.proof::after {
+    content: "\25FC	";
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    bottom: 0;
+    right: 0;
+}
+
+.beamertheorem {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+  font-style: italic;
+  font-size: 24px;
+  color: black;
+  border-radius: 10px;
+  background-color: rgb(222,222,231);
+  box-shadow: 5px 10px 8px #888888;
+}
+
+.beamertheorem::before {
+  content: "Theorem. ";
+  font-weight: bold;
+  font-style: normal;
+  display: inline-block;
+  width: -webkit-fill-available;
+  color: white;
+  border-radius: 10px 10px 0 0;
+  padding: 10px 5px 5px 15px;
+  background-color: rgb(38, 38, 134);
+}
+
+.beamertheorem p {
+    padding: 15px 15px 15px 15px;
+}
+
+.example {
+    counter-increment: example;
+    display: block;
+    margin: 12px 0;
+    font-style: italic;
+    position: relative;
+}
+
+.example::before {
+    content: "Example. ";
+    font-weight: bold;
+    font-style: normal;
+}
+
+.example[text]::before {
+    content: "Example (" attr(text) ") ";
+}
+
+.example p {
+    display: inline;
+}
+
+.example::after {
+    font-style: normal;
+    content: "\25FB";
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    bottom: 0;
+    right: 0;
+}
